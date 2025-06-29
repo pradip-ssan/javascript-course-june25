@@ -10,7 +10,7 @@
 
 1: Shopping Cart
 
-```
+```js
 let cartItems = 0; // variable count can change
 const shippingCharge = 50; // fixed cost
 
@@ -28,7 +28,7 @@ function addItemToCart() {
 
 ### ✅ Example 2: Login Form
 
-```
+```js
 function loginUser(username, password) {
   const isAdmin = username === "admin"; // constant after first check
   let isLoggedIn = false;
@@ -53,12 +53,12 @@ Primitive types in JS:
 - Null: empty or unknown
 - Undefined: declared but not assigned
 
-```
-const name = "John Doe";        // String
-const age = 30;                 // Number
-const isPremiumUser = true;     // Boolean
-const address = null;           // User didn’t provide address
-let phone;                      // Undefined, not yet given
+```js
+const name = "John Doe"; // String
+const age = 30; // Number
+const isPremiumUser = true; // Boolean
+const address = null; // User didn’t provide address
+let phone; // Undefined, not yet given
 
 console.log(`Name: ${name}, Age: ${age}, Premium: ${isPremiumUser}`);
 ```
@@ -76,14 +76,12 @@ console.log(`Name: ${name}, Age: ${age}, Premium: ${isPremiumUser}`);
 - **Type Conversion**: Manually converting one type to another using String(), Number(), etc.
 - **Type Coercion**: JS automatically changes type (e.g., "5" + 1 → "51")
 
-```
-
-const price = "100";     // string from input field
+```js
+const price = "100"; // string from input field
 const tax = 18;
 
-const total = Number(price) + tax;  // Convert string to number
+const total = Number(price) + tax; // Convert string to number
 console.log("Total Price:", total); // 118
-
 ```
 
 ### 👨‍💻 Use Case:
@@ -93,23 +91,18 @@ console.log("Total Price:", total); // 118
 
 #### ⚠️ Type Coercion Example:
 
-```
-
+```js
 console.log("5" + 1); // "51" → string, not number!
 console.log("5" - 1); // 4 → JS coerces to number
-
 ```
 
 ## ✅ Practice (read and type in console below code)
 
-```
-
+```js
 const inputAge = prompt("Enter your age:"); // returns string
 if (Number(inputAge) >= 18) {
   console.log("You can register.");
 } else {
   console.log("Underage.");
 }
-
-
 ```
