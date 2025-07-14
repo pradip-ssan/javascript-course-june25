@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      #listBtn {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>To Do List</h1>
+    <input type="text" value="list item2 " placeholder="Enter Task" id="task" />
+    <button id="listBtn">add task</button>
+
+    <ul id="lists">
+      <li>list item 1</li>
+    </ul>
+
+    <script>
+      let inputEle = document.getElementById("task");
+
+      let btnEle = document.getElementById("listBtn");
+      let ulList = document.getElementById("lists");
+
+      function addList() {
+        console.log("clicked");
+
+        // ulList.innerHTML = `<li> ${inputEle.value} </li>`;
+
+        let liEle = document.createElement("li");
+        liEle.innerHTML = `<li> ${inputEle.value} <span class= "deletClass">❎</span> </li> `;
+
+        ulList.appendChild(liEle);
+      }
+
+      btnEle.addEventListener("click", addList);
+    </script>
+  </body>
+</html>
