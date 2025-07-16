@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Methods</title>
+  </head>
+  <body>
+    <!-- querySelector, querySelectorAll, getElementByTagName, getElementByClassName nodeList, htmlCollection,  -->
+
+    <ul class="lists">
+      <li class="item-1">item 1</li>
+      <li class="item-2">item2</li>
+      <li class="item-3">item3</li>
+      <li class="item-4">item4</li>
+      <li class="item-5">item5 1</li>
+    </ul>
+    <button>add task</button>
+    <script>
+      let ulList = document.querySelector(".lists");
+      // console.log(ulList);
+
+      // document
+      //   .querySelector("button")
+      //   .addEventListener("click", function newLi() {
+      //     let newLi = document.createElement("li");
+      //     newLi.textContent = "item 6";
+      //     ulList.appendChild(newLi);
+      //   });
+
+      // // return NodeList
+      // let liEle = document.querySelectorAll(".lists li");
+      // console.log(liEle);
+
+      // for (let i = 0; i < liEle.length; i++) {
+      //   console.log(`${i} => ${liEle[i]}`);
+      // }
+      // // return html collection
+      // let liEleCollection = document.getElementsByTagName("li");
+      // console.log(liEleCollection);
+
+      // for (let i = 0; i < liEle.length; i++) {
+      //   console.log(`${i} => ${liEle[i]}`);
+      // }
+
+      document
+        .querySelector("li")
+        .addEventListener("click", () => console.log("hi"), true);
+    </script>
+  </body>
+</html>
