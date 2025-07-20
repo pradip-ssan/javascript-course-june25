@@ -16,45 +16,25 @@
     </style>
   </head>
   <body>
-    <!-- <div class="parent">
+    <div class="parent">
       parent
       <div class="child">child</div>
-    </div> -->
-
-    <ul class="lists"></ul>
-    <button>add task</button>
+    </div>
 
     <script>
-      document.querySelector("button").addEventListener("click", function () {
-        const li = document.createElement("li");
-        li.textContent = `New Task ${Math.floor(Math.random() * 100)} `;
-        document.querySelector(".lists").appendChild(li);
-      });
-
-      // event delegation
-      // This allows us to add an event listener to a parent element
-      // and handle events for its child elements without needing to add
-      // individual listeners to each child.
-      document
-        .querySelector(".lists")
-        .addEventListener("click", function (event) {
-          console.log(event);
-          if (event.target.tagName === "H1") {
-            // event.target.style.textDecoration = "line-through";
-            console.log("List item clicked:", event.target.textContent);
-          }
-        });
-
-      // const parent = document.querySelector(".parent");
-      // const child = document.querySelector(".child");
-
-      // parent.addEventListener("click", function (event) {
-      //   console.log("Parent clicked");
-      // });
-      // child.addEventListener("click", function (event) {
-      //   console.log("Child clicked");
-      //   console.log(event.type);
-      // });
+      const parent = document.querySelector(".parent");
+      const child = document.querySelector(".child");
+      parent.addEventListener(
+        "click",
+        () => console.log("parent- capturing"),
+        true
+      );
+      parent.addEventListener(
+        "click",
+        () => console.log("parent- bubbling"),
+        false
+      );
+      child.addEventListener("click", () => console.log("child"), false);
     </script>
   </body>
 </html>
