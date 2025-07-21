@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo project-Event Delegation</title>
+
+    <style>
+      li {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .completed {
+        list-style: circle;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text" placeholder="Enter Your Task" id="taskInput" />
+      <button type="submit">add task</button>
+    </form>
+
+    <ul class="tasksList"></ul>
+    <script>
+      const input = document.querySelector("#taskInput");
+
+      console.log(input);
+      const tasksList = document.querySelector(".tasksList");
+
+      function liElement(inputText) {
+        const li = document.createElement("li");
+        li.innerHTML = `<span class = "task-text"> ${inputText}</span>
+      <div> 
+        
+        <button data-action= "completed"> ✅ </button>
+        <button data-action = "delete"> 🗑️ </button>
+        
+        <button data-action = "edit"> 📝 </button>
+        </div>
+      `;
+
+        tasksList.appendChild(li);
+      }
+
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const inputText = input.value;
+        console.log(inputText);
+
+        liElement(inputText);
+
+        input.value = "";
+      });
+
+      // event delegation
+
+      tasksList.addEventListener("click", function (e) {
+        console.log(e.target);
+        console.log(e.target.dataset.action);
+
+        const btnText = e.target.dataset.action;
+
+        const liEle = e.target.closest("li");
+
+        if (btnText === "delete") {
+          liEle.remove();
+        } else if (btnText === "completed") {
+          liEle.classList.toggle("completed");
+        } else if (btnText === "edit") {
+          const span = liEle.querySelector(".task-text");
+          const nexText = prompt("Edit task :", span.textContent);
+
+          span.textContent = newText;
+        }
+      });
+    </script>
+  </body>
+</html>

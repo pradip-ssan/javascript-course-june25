@@ -13,28 +13,37 @@
         background-color: lightcoral;
         padding: 10px;
       }
+      .grandchild {
+        background-color: blue;
+        padding: 10px;
+      }
     </style>
   </head>
   <body>
     <div class="parent">
       parent
-      <div class="child">child</div>
+      <div class="child">
+        child
+        <div class="grandchild">grand child</div>
+      </div>
     </div>
 
     <script>
       const parent = document.querySelector(".parent");
       const child = document.querySelector(".child");
-      parent.addEventListener(
-        "click",
-        () => console.log("parent- capturing"),
-        true
-      );
+      const grandchild = document.querySelector(".grandchild");
+
       parent.addEventListener(
         "click",
         () => console.log("parent- bubbling"),
         false
       );
-      child.addEventListener("click", () => console.log("child"), false);
+      parent.addEventListener(
+        "click",
+        () => console.log("parent- capturing"),
+        false
+      );
+      child.addEventListener("click", () => console.log("child"), true);
     </script>
   </body>
 </html>
