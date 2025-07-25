@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Methods</title>
+  </head>
+  <body>
+    <h1>Array Methods</h1>
+
+    <ul class="list"></ul>
+
+    <script>
+      const people = ["Aditya", "rohit", "raushan"];
+
+      const list = people.map((name) => `<li> ${name} </li>`);
+
+      // for (i = 0; i < list.length; i++) {
+      //   const ul = document.querySelector(".list");
+      //   ul.innerHTML += list[i];
+      // }
+
+      list.forEach((li) => {
+        const ul = document.querySelector(".list");
+        ul.innerHTML += li;
+      });
+    </script>
+  </body>
+</html>
