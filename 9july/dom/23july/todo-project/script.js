@@ -27,7 +27,6 @@ function addTask(text) {
 // ✅ EVENT DELEGATION
 list.addEventListener("click", function (e) {
   const action = e.target.dataset.action;
-  if (!action) return;
 
   const li = e.target.closest("li");
 

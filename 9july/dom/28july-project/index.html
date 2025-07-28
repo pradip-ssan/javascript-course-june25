@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validator</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 20px;
+      }
+      input:not(input[type="checkbox"]) {
+        display: block;
+        margin: 10px 0;
+        padding: 8px;
+        width: 250px;
+      }
+      button[type="submit"] {
+        display: block;
+        background-color: rgb(33, 33, 151);
+        color: white;
+        padding: 5px 10px;
+        margin-top: 15px;
+        text-align: center;
+      }
+      small {
+        color: red;
+        display: block;
+        margin-bottom: 5px;
+      }
+      .user {
+        border: 1px solid #ccc;
+        padding: 8px;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Register Form</h2>
+
+    <form id="form">
+      <label>Email:</label>
+      <input type="email" id="email" />
+      <small id="emailError"></small>
+
+      <label>Password:</label>
+      <input type="password" id="password" />
+      <small id="passwordError"></small>
+
+      <label>
+        <input type="checkbox" id="togglePassword" /> Show Password
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <h3>📜 All Users</h3>
+    <div id="userList"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
