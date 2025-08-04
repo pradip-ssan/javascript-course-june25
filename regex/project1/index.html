@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>RegEx Real World Project</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 20px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        margin: 10px 0;
+        padding: 8px;
+      }
+      .valid {
+        border: 2px solid green;
+      }
+      .invalid {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>🧾 Form Validation</h2>
+    <input type="email" id="email" placeholder="Enter Email" />
+    <input type="text" id="phone" placeholder="Enter Phone (123-456-7890)" />
+    <input
+      type="password"
+      id="password"
+      placeholder="Enter Password (min 8 chars, 1 digit)"
+    />
+    <button onclick="validateInputs()">Validate Inputs</button>
+
+    <h2>🔍 Text Analyzer</h2>
+    <textarea
+      id="textData"
+      rows="6"
+      placeholder="Paste paragraph here..."
+    ></textarea>
+    <input type="text" id="searchWord" placeholder="Search word..." />
+    <button onclick="searchWord()">Search</button>
+    <button onclick="replaceBadWords()">Replace Bad Words</button>
+    <button onclick="extractInfo()">Extract Info</button>
+
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
