@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Dev Course Tabs</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="tab-section">
+      <h1 class="title">Web Development Course</h1>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab-button active" data-tab="overview">Overview</button>
+        <button class="tab-button" data-tab="curriculum">Curriculum</button>
+        <button class="tab-button" data-tab="instructors">Instructors</button>
+        <button class="tab-button" data-tab="reviews">Reviews</button>
+        <button class="tab-button" data-tab="faq">FAQs</button>
+      </div>
+
+      <!-- Tab Contents -->
+      <div class="tab-contents">
+        <div class="tab-content active" id="overview">
+          <h2>Course Overview</h2>
+          <p>
+            Learn full-stack web development with HTML, CSS, JavaScript, React,
+            Node.js, MongoDB, and more. Build real-world projects and become
+            job-ready.
+          </p>
+        </div>
+
+        <div class="tab-content" id="curriculum">
+          <h2>Curriculum</h2>
+          <ul>
+            <li>Week 1: HTML, CSS Basics</li>
+            <li>Week 2: JavaScript Fundamentals</li>
+            <li>Week 3: DOM, Events, Projects</li>
+            <li>Week 4: React & State Management</li>
+            <li>Week 5: Node.js, Express, MongoDB</li>
+            <li>Week 6: Full-Stack Project + Deployment</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="instructors">
+          <h2>Instructors</h2>
+          <p>
+            Learn from experienced developers with years of industry experience.
+          </p>
+          <ul>
+            <li>
+              <strong>Pradip Kumar Yadav</strong> – MERN Stack Expert & Founder
+              of EOE Academy
+            </li>
+            <li><strong>Jane Doe</strong> – UI/UX & Frontend Engineer</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="reviews">
+          <h2>Student Reviews</h2>
+          <p>
+            ⭐️⭐️⭐️⭐️⭐️ – “The course is practical and in-depth. Landed my
+            first developer job thanks to it!”
+          </p>
+          <p>
+            ⭐️⭐️⭐️⭐️ – “Great instructors and support. The projects are very
+            helpful!”
+          </p>
+        </div>
+
+        <div class="tab-content" id="faq">
+          <h2>FAQs</h2>
+          <p>
+            <strong>Q:</strong> Do I need prior coding experience?<br />
+            <strong>A:</strong> No! The course starts from the basics.
+          </p>
+          <p>
+            <strong>Q:</strong> Is this a live or recorded course?<br />
+            <strong>A:</strong> This is a live course with recorded access
+            afterward.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
